@@ -38,15 +38,12 @@ class _SplashState extends State<Splash> {
     super.initState();
     Timer(Duration(seconds: widget.seconds), () {
       if (widget.navigateAfterSeconds is String) {
-        // It's fairly safe to assume this is using the in-built material
-        // named route component
         Navigator.of(context).pushReplacementNamed(widget.navigateAfterSeconds);
       } else if (widget.navigateAfterSeconds is Widget) {
         Navigator.of(context).pushReplacement(new MaterialPageRoute(
             builder: (BuildContext context) => widget.navigateAfterSeconds));
       } else {
-        throw new ArgumentError(
-            'widget.navigateAfterSeconds must either be a String or Widget');
+        throw new ArgumentError("Supply proper arguments");
       }
     });
   }
