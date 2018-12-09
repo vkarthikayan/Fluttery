@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jb/app/home/JBDrawer.dart';
+import 'package:handletab/app/home/JBDrawer.dart';
 
 import 'home/CustomHomeContent.dart';
 
